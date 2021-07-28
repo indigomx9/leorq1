@@ -5,6 +5,7 @@ export default (
     req: NextApiRequest, 
     res: NextApiResponse<IPerson>
 ): void => {
+    console.log("getting person");
     res.status(200)
     .json({
         id: "1", 
