@@ -5,13 +5,8 @@ export default (
     req: NextApiRequest, 
     res: NextApiResponse<IPerson>
 ): void => {
-    console.log("getting person");
-    res.status(200)
-    .json({
-        id: "1", 
-        name: "Henry Quartermain", 
-        age: 18,
-    });
+    const data: IPerson = JSON.parse(req.body);
+    res.status(200).json(data);
 };
 
 
